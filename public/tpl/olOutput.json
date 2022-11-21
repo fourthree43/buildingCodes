@@ -1,0 +1,167 @@
+{
+  "id": "8a87973e626f6c3501626f6ca6340000",
+  "createAt": "2021-07-19 15:40:13",
+  "updateAt": "2021-07-19 15:40:13",
+  "enabled": true,
+  "title": "模板",
+  "projection": "EPSG:4326",
+  "regionCode": "",
+  "regionName": "",
+  "target": "map-container-output",
+  "content": {
+    "globalMode": "2D",
+    "map": {
+      "globalLayer": [],
+      "baseLayers": [
+        {
+          "id": "0158336bce132v9282de583367510106",
+          "alias": "天地图矢量",
+          "name": "vec_c",
+          "group": "vec",
+          "crs": "EPSG:4326",
+          "type": "tms",
+          "index": 1,
+          "visible": true,
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=vec_c&x={x}&y={y}&l={z}&tk=b5aea23b237475f79091155f39ffdefa"
+        },
+        {
+          "id": "0158336bce132v9282de583367510107",
+          "alias": "天地图矢量注记",
+          "name": "cva_c",
+          "group": "vec",
+          "crs": "EPSG:4326",
+          "type": "tms",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=cva_c&x={x}&y={y}&l={z}&tk=b5aea23b237475f79091155f39ffdefa",
+          "index": 2,
+          "visible": true
+        },
+        {
+          "id": "0158336bce132v9282de583367510106",
+          "alias": "天地图影像",
+          "name": "img_c",
+          "group": "img",
+          "type": "tms",
+          "crs": "EPSG:4326",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=img_c&x={x}&y={y}&l={z}&tk=b5aea23b237475f79091155f39ffdefa",
+          "index": 3,
+          "visible": false
+        },
+        {
+          "id": "0158336bce132v9282de583367510107",
+          "alias": "天地图影像注记",
+          "name": "cia_c",
+          "group": "img",
+          "type": "tms",
+          "crs": "EPSG:4326",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=cia_c&x={x}&y={y}&l={z}&tk=b5aea23b237475f79091155f39ffdefa",
+          "index": 4,
+          "visible": false
+        }
+      ],
+      "options": {
+        "center": [
+          105.61071435435876,
+          27.88074648270613
+        ],
+        "zoom": 4,
+        "min": 1,
+        "max": 18,
+        "constrainResolution": true
+      }
+    },
+    "widgets": [
+      {
+        "id": "data-list",
+        "name": "图层",
+        "visible": true,
+        "layers": []
+      }
+    ],
+    "tools": [
+      {
+        "id": "area-picker",
+        "name": "area-picker",
+        "alias": "选择区域",
+        "component": "AreaPick",
+        "icon": "icon-didian-2",
+        "config": {
+          "picker-menu": [
+            {
+              "name": "Polygon",
+              "alias": "多边形",
+              "icon": "icon-duobianxing"
+            },
+            {
+              "name": "Rectangle",
+              "alias": "矩形",
+              "icon": "icon-quyuxuanze"
+            },
+            {
+              "name": "Point",
+              "alias": "点",
+              "icon": "icon-dingweidian"
+            },
+            {
+              "name": "Circle",
+              "alias": "圆",
+              "icon": "icon-tishi"
+            }
+          ]
+        }
+      },
+      {
+        "id": "switch-baselayer",
+        "name": "switch-baselayer",
+        "alias": "地图切换",
+        "component": "LayerSwitch",
+        "icon": "icon-earth",
+        "config": {
+          "default": "ter",
+          "layerGroup": [
+            {
+              "name": "vec",
+              "alias": "矢量"
+            },
+            {
+              "name": "img",
+              "alias": "影像"
+            },
+            {
+              "name": "ter",
+              "alias": "地形"
+            }
+          ]
+        }
+      },
+      {
+        "id": "measure",
+        "name": "measure",
+        "alias": "测量工具",
+        "component": "Measure",
+        "icon": "icon-chizi_o"
+      },
+      {
+        "id": "transparency",
+        "name": "transparency",
+        "alias": "透明度",
+        "component": "Transparency",
+        "icon": "icon-toumingdu"
+      },
+      {
+        "id": "station",
+        "name": "station",
+        "alias": "站点联动",
+        "component": "Station",
+        "icon": "icon-liandong"
+      },
+      {
+        "id": "map-recovery",
+        "name": "map-recovery",
+        "alias": "地图恢复",
+        "component": "MapRecovery",
+        "icon": "icon-shuaxin-3"
+      }
+    ],
+    "controls": []
+  }
+}

@@ -1,3 +1,11 @@
+/*
+ * @Author: 张仕山
+ * @Date: 2022-08-23 17:56:06
+ * @LastEditors: 张仕山
+ * @LastEditTime: 2022-08-25 16:01:05
+ * @Description:
+ * @FilePath: \pure-project\vue-test\src\router\index.js
+ */
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
